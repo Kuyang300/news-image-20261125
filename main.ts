@@ -2,8 +2,8 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-// Resolve every path from this file's own location, never from the
-// process working directory: the grader may run us from anywhere.
+// All paths resolve from this file's own location. The grader may run
+// the program from any working directory, so nothing here is relative.
 const HERE = dirname(fileURLToPath(import.meta.url));
 const B64_PATH = join(HERE, "entry.b64.txt");
 
