@@ -2,6 +2,8 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
+// v3 entrypoint: decodes the bundled entry.b64.txt and writes the image.
+// Image: "The World in One Page" — 50 stories, 10 sections, 25 November 2026.
 // All paths resolve from this file's own location. The grader may run
 // the program from any working directory, so nothing here is relative.
 const HERE = dirname(fileURLToPath(import.meta.url));
